@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StringRing - Asistent</title>
+    <link rel="stylesheet" type="text/css" href="css/controls.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div class="generator" id="generator-box">
+        <div class="controls">
+            <div>
+                <h1 style="text-align: center;">StringRing Assistant</h1>
+                <img src="./image/Craftorika 1.0-vector.png" alt="logo" class="small" id="logo-small">
+            
+                <div id="controls-box">
+
+                    <div class="control-block centered select-quality">
+                        <input type="submit" id="start-creating-btn" value="Розпочати"  onclick="startCreating()">
+                        <input type="submit" id="previev-btn"       value="Демонстрація" onclick="startDrawing()">
+                    </div>
+
+                    <div class="control-block">
+                        <label><b>Номер кроку:</b><br>
+                            <input type="range" id="select-step-box" value="2" min="2" max="7000" disabled>
+                            <input type="number" id="select-step-value" value="2" min="2" max="7000" disabled>
+                        </label>
+                    </div>
+
+                    <div class="control-block centered">
+                        <input type="submit" id="last-step-btn" value="Назад" onclick="lastStep()" disabled>
+                        <input type="submit" id="next-step-btn" value="Вперед"   onclick="nextStep()" disabled>
+                    </div>
+
+                    <div class="control-block centered select-quality">
+                        <label><b>Таймер</b><br>
+                        <input type="range" id="step-timer-box" value="5" min="1" max="20" disabled>
+                        <input type="number" id="step-timer-value" value="5" min="1" max="20" disabled>
+                        <br><br>
+                        <input type="submit" id="start-stop-timer" value="Старт" disabled>
+                    </div>
+                </div>
+                <div class="control-block centered">
+                    <div id="info-box"></div>
+                </div>
+            </div>
+            <img src="./image/Craftorika 1.0-vector.png" alt="logo" class="big" id="logo-big">
+        </div>
+
+        <div class="view" id="view">
+            <div id="step-number"></div>
+            <canvas class="standart-quality" id="canvasOutput3" ></canvas>
+            <canvas class="standart-quality-fix" id="canvasOutput2" width="500" height="500"></canvas>
+        </div>
+    </div>
+
+    <script src="js/asistant.js"></script>
+</body>
+</html>
